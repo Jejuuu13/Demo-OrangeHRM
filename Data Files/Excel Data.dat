@@ -7,9 +7,9 @@
    <containsHeaders>true</containsHeaders>
    <csvSeperator></csvSeperator>
    <dataFileGUID>39b8b250-1526-4607-806e-23857b7669e0</dataFileGUID>
-   <dataSourceUrl>C:\Users\oyuye\Katalon Studio\Test-Web\Excel\Web-Login-Demo.xlsx</dataSourceUrl>
+   <dataSourceUrl>../../Katalon Studio/Test-Web/Excel/Web-Login-Demo.xlsx</dataSourceUrl>
    <driver>ExcelFile</driver>
-   <isInternalPath>false</isInternalPath>
+   <isInternalPath>true</isInternalPath>
    <query></query>
    <secureUserAccount>false</secureUserAccount>
    <sheetName>Sheet1</sheetName>

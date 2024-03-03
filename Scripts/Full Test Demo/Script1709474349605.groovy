@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 TestData input = findTestData('Data Files/Excel Data')
 
 // Buka Browser Edge & Fullscreen Window :
-WebUI.openBrowser('')
+WebUI.openBrowser('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 WebUI.maximizeWindow()
 
 // Direct link ke Opensource Web (Orangehrm) :
