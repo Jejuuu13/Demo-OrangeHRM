@@ -17,23 +17,39 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+TestData input = findTestData('Data Files/Excel Data')
+
+// Buka Browser Edge & Fullscreen Window :
 WebUI.openBrowser('')
-WebUI.delay(2)
-
 WebUI.maximizeWindow()
-WebUI.delay(2)
 
+// Direct link ke Opensource Web (Orangehrm) :
 WebUI.navigateToUrl('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-WebUI.delay(2)
 
-WebUI.click(findTestObject('Object Repository/Login/Page_OrangeHRM/input_Username_username'))
-WebUI.delay(2)
+// Jika Web belum load up dengan sempurna : 
+if (WebUI.verifyElementPresent(findTestObject('Object Repository/New Folder (1)/Page_OrangeHRM/input_Username_username'), 5) == false) {
+	WebUI.refresh()
+}
+	else {
+		for (int baris = 1; baris <= 3; baris++) {
+			
+			// Username & Password : Input
+			WebUI.setText(findTestObject('Object Repository/New Folder (1)/Page_OrangeHRM/input_Username_username'), input.getValue('Username', baris))
+			WebUI.delay(2)
+			
+			WebUI.setText(findTestObject('Object Repository/New Folder (1)/Page_OrangeHRM/input_Password_password'), input.getValue('Password', baris))
+			WebUI.delay(2)
+			
+			// Encrypted Password : 
+//			WebUI.setEncryptedText(findTestObject('Object Repository/New Folder (1)/Page_OrangeHRM/input_Password_password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
+//			WebUI.delay(2)
+			
+			// Login to Homepage :
+			WebUI.click(findTestObject('Object Repository/New Folder (1)/Page_OrangeHRM/button_Login'))
+			WebUI.delay(5)
+			
+		}
 
-WebUI.setText(findTestObject('Object Repository/Page_OrangeHRM/input_Username_username'), 'Admin')
-WebUI.delay(2)
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Login/Page_OrangeHRM/input_Password_password'), 'hUKwJTbofgPU9eVlw/CnDQ==')
-WebUI.delay(2)
-
-WebUI.click(findTestObject('Object Repository/Login/Page_OrangeHRM/button_Login'))
+		
+	}
 

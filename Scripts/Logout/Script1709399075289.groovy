@@ -17,3 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+	// Logout :
+	WebUI.click(findTestObject('Object Repository/New Folder (1)/Page_OrangeHRM/i_Dashboard_oxd-icon bi-caret-down-fill oxd_d2fd49'))
+	WebUI.delay(2)
+	WebUI.click(findTestObject('Object Repository/New Folder (1)/Page_OrangeHRM/a_Logout'))
+			
+
