@@ -26,7 +26,7 @@ WebUI.openBrowser('')
 WebUI.maximizeWindow()
 
 // Direct link ke Opensource Web (Orangehrm) :
-WebUI.navigateToUrl('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+WebUI.navigateToUrl('https://opensource-demo.orangehrmlive.com')
 
 // Jika Web belum load up dengan sempurna : 
 if (WebUI.verifyElementPresent(findTestObject('Object Repository/New Folder (1)/Page_OrangeHRM/input_Username_username'), 5) == false) {

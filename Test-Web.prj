@@ -4,7 +4,10 @@
    <name>Test-Web</name>
    <tag></tag>
    <UUID>de4191a2-da27-4ab6-8f2c-88834c3b75c9</UUID>
+   <freeLicense>false</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
+   <modifiedEdition>ENTERPRISE</modifiedEdition>
+   <modifiedVersion>9.3.2</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
    <projectFileLocation>C:\Users\oyuye\Katalon Studio\Test-Web\Test-Web.prj</projectFileLocation>
    <sourceContent>
