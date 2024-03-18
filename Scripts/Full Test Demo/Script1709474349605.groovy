@@ -33,7 +33,7 @@ if (WebUI.verifyElementPresent(findTestObject('Object Repository/New Folder (1)/
 	WebUI.refresh()
 }
 	else {
-		for (int baris = 1; baris <= 3; baris++) {
+		for (int baris = 1; baris <= 2; baris++) {
 			
 			// Username & Password : Input
 			WebUI.setText(findTestObject('Object Repository/New Folder (1)/Page_OrangeHRM/input_Username_username'), input.getValue('Username', baris))
